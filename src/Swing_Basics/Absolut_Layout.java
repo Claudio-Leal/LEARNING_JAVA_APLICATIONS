@@ -3,10 +3,9 @@ package Swing_Basics;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import java.awt.BorderLayout;
+import javax.swing.JButton;
 
-public class Swing_Basics {
+public class Absolut_Layout {
 
 	private JFrame frame;
 
@@ -17,7 +16,7 @@ public class Swing_Basics {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Swing_Basics window = new Swing_Basics();
+					Absolut_Layout window = new Absolut_Layout();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -29,7 +28,7 @@ public class Swing_Basics {
 	/**
 	 * Create the application.
 	 */
-	public Swing_Basics() {
+	public Absolut_Layout() {
 		initialize();
 	}
 
@@ -40,9 +39,11 @@ public class Swing_Basics {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Novo texto");
-		frame.getContentPane().add(lblNewLabel, BorderLayout.CENTER);
+		JButton btnNewButton = new JButton("Bot\u00E3o 1");
+		btnNewButton.setBounds(162, 110, 89, 23);
+		frame.getContentPane().add(btnNewButton);
 	}
 
 }
